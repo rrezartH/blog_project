@@ -3,6 +3,11 @@ import { MongoClient } from "mongodb";
 async function handler(req, res) {
   if (req.method === "POST") {
     const { email, name, message } = req.body;
+    const bodddy = {
+      email,
+      name,
+      message,
+    };
 
     if (
       !email ||
